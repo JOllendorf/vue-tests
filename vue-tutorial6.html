@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Vue Test</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="Jeff O">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<div id="root">
+
+<h2>Robotnik's To-Do List</h2>
+<ul>
+  <li v-for="task in tasks" v-text="task.description"></li>
+</ul>
+<h2>Incompleted Tasks</h2>
+<ul>
+  <li v-for="task in incompleteTasks" v-text="task.description"></li>
+</ul>
+
+</div>
+
+<script src="https://unpkg.com/vue@2.3.4/dist/vue.js"></script>
+
+  <script>
+
+  	var app = new Vue ({
+
+  		el:'#root',
+  		
+      data: {
+
+        tasks: [
+
+        { description: 'Touch my pingas.', completed: true },
+        { description: 'Demote Coconuts to Scrub-Monkey 3rd Class', completed: false },
+        { description: 'Hate that hedgehog', completed: true },
+        { description: 'Violate the good doctor', completed: false },
+        { description: 'Call them nincombots again.', completed: true },
+        { description: 'Have that heinous hedgehog hammered!', completed: false },
+        ]
+  		  
+  	},
+
+      methods: {
+
+
+      },
+
+       computed: {
+
+        incompleteTasks(){
+          return this.tasks.filter(task => ! task.completed);
+        }
+        
+      }
+  	})
+  </script>
+</body>
+</html>

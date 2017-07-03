@@ -1,0 +1,19 @@
+{
+  "name": "vue-practice",
+  "version": "1.0.0",
+  "description": "Practicing Vue",
+  "main": "main.js",
+  "dependencies": {
+    "bulma": "^0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Testing!\""
+  },
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/ashleygwilliams/my_package.git"
+  },
+  "author": "Jeffrey Ollendorf",
+  "license": "ISC"
+}
