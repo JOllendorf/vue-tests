@@ -12,7 +12,7 @@
   },
    "repository": {
     "type": "git",
-    "url": "https://github.com/ashleygwilliams/my_package.git"
+    "url": "https://github.com/JOllendorf/vue-tests"
   },
   "author": "Jeffrey Ollendorf",
   "license": "ISC"
